@@ -117,9 +117,9 @@ public abstract class ZendeskNormalServices implements ZendeskService
                 while (iterator.hasNext()) {
                     final JsonNode recordJsonNode = iterator.next();
 
-                    if (isUpdatedBySystem(recordJsonNode, startTime)) {
-                        continue;
-                    }
+                    // if (isUpdatedBySystem(recordJsonNode, startTime)) {
+                    //     continue;
+                    // }
 
                     // Contain some records  that later than end_time. Checked and don't add.
                     // Because the api already sorted by updated_at or timestamp for ticket_events, we just need to break no need to check further.
